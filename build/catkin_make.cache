@@ -1,0 +1,2 @@
+nlink_parser:rplidar_ros
+-DCATKIN_DEVEL_PREFIX=/home/tymiao/mty/piping_project/devel -DCMAKE_INSTALL_PREFIX=/home/tymiao/mty/piping_project/install -G Unix Makefiles
