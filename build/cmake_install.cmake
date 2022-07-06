@@ -133,6 +133,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/tymiao/mty/piping_project/build/gtest/cmake_install.cmake")
   include("/home/tymiao/mty/piping_project/build/nlink_parser/cmake_install.cmake")
   include("/home/tymiao/mty/piping_project/build/rplidar_ros/cmake_install.cmake")
+  include("/home/tymiao/mty/piping_project/build/USB_sample_cmd/cmake_install.cmake")
 
 endif()
 

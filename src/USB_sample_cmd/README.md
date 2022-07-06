@@ -1,7 +1,7 @@
 # libirsample示例程序结构以及使用流程介绍
 
-
-
+注意libs文件中库文件arm  amd64不同的linux版本
+先运行一个roscore   本为arm64
 ## 一、程序结构
 
 ![](./irsample_structure.png)

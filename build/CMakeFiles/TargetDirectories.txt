@@ -127,3 +127,11 @@
 /home/tymiao/mty/piping_project/build/rplidar_ros/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir
 /home/tymiao/mty/piping_project/build/rplidar_ros/CMakeFiles/rplidarNode.dir
 /home/tymiao/mty/piping_project/build/rplidar_ros/CMakeFiles/test.dir
+/home/tymiao/mty/piping_project/build/USB_sample_cmd/CMakeFiles/install/local.dir
+/home/tymiao/mty/piping_project/build/USB_sample_cmd/CMakeFiles/install.dir
+/home/tymiao/mty/piping_project/build/USB_sample_cmd/CMakeFiles/list_install_components.dir
+/home/tymiao/mty/piping_project/build/USB_sample_cmd/CMakeFiles/rebuild_cache.dir
+/home/tymiao/mty/piping_project/build/USB_sample_cmd/CMakeFiles/edit_cache.dir
+/home/tymiao/mty/piping_project/build/USB_sample_cmd/CMakeFiles/test.dir
+/home/tymiao/mty/piping_project/build/USB_sample_cmd/CMakeFiles/install/strip.dir
+/home/tymiao/mty/piping_project/build/USB_sample_cmd/CMakeFiles/sample.dir

@@ -319,7 +319,7 @@ DLLEXPORT void iruvc_camera_release(IruvcHandle_t* iruvc_handle);
 
 
 /**
- * @brief Polling frame transfered from uvc camera.
+ * @brief Polling frame transfered from .
  * User can't recieve data when use user callback function
  *
  * @param[in] handle iruvc's handle

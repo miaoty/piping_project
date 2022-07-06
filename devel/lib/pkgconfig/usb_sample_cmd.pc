@@ -1,0 +1,8 @@
+prefix=/home/tymiao/mty/piping_project/devel
+
+Name: usb_sample_cmd
+Description: Description of usb_sample_cmd
+Version: 0.1.2
+Cflags: -I/home/tymiao/mty/piping_project/src/USB_sample_cmd/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy rosconsole std_msgs cv_bridge image_transport sensor_msgs

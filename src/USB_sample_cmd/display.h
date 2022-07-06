@@ -12,6 +12,13 @@
 #include <unistd.h>
 #endif
 
+#include <ros/ros.h>
+#include <image_transport/image_transport.h>
+#include <cv_bridge/cv_bridge.h>
+#include <sensor_msgs/image_encodings.h>
+#include "std_msgs/String.h"
+
+
 #define OPENCV_ENABLE
 #ifdef OPENCV_ENABLE
 #include <opencv2/imgproc.hpp>
@@ -35,5 +42,7 @@ void display_one_frame(StreamFrameInfo_t* stream_frame_info, const char* title);
 
 //display thread
 void* display_function(void* threadarg);
+
+
 
 #endif

@@ -718,6 +718,32 @@ ros/forwards.h
 
 /opt/ros/noetic/include/rosconsole/macros_generated.h
 
+/opt/ros/noetic/include/serial/serial.h
+limits
+-
+vector
+-
+string
+-
+cstring
+-
+sstream
+-
+exception
+-
+stdexcept
+-
+serial/v8stdint.h
+-
+
+/opt/ros/noetic/include/serial/v8stdint.h
+stddef.h
+-
+stdio.h
+-
+stdint.h
+-
+
 /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h
 ros/macros.h
 -

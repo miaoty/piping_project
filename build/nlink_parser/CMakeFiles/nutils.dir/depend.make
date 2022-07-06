@@ -127,6 +127,8 @@ nlink_parser/CMakeFiles/nutils.dir/src/utils/init_serial.cpp.o: /opt/ros/noetic/
 nlink_parser/CMakeFiles/nutils.dir/src/utils/init_serial.cpp.o: /opt/ros/noetic/include/ros/wall_timer.h
 nlink_parser/CMakeFiles/nutils.dir/src/utils/init_serial.cpp.o: /opt/ros/noetic/include/ros/wall_timer_options.h
 nlink_parser/CMakeFiles/nutils.dir/src/utils/init_serial.cpp.o: /opt/ros/noetic/include/rosconsole/macros_generated.h
+nlink_parser/CMakeFiles/nutils.dir/src/utils/init_serial.cpp.o: /opt/ros/noetic/include/serial/serial.h
+nlink_parser/CMakeFiles/nutils.dir/src/utils/init_serial.cpp.o: /opt/ros/noetic/include/serial/v8stdint.h
 nlink_parser/CMakeFiles/nutils.dir/src/utils/init_serial.cpp.o: /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h
 nlink_parser/CMakeFiles/nutils.dir/src/utils/init_serial.cpp.o: /opt/ros/noetic/include/xmlrpcpp/XmlRpcValue.h
 

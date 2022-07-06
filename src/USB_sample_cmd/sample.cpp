@@ -4,7 +4,7 @@
 extern "C" {
 #endif
 
-
+using namespace std;
 
 int frame_idx = 0;
 
@@ -174,8 +174,25 @@ void* thread_function(void* threadarg)
     return 0;
 }
 
-int main(void)
+void chatterCallback(const std_msgs::String::ConstPtr& msg)
 {
+    ROS_INFO("fdsaf");
+}
+
+
+int main(int argc, char** argv)
+{
+    ros::init(argc, argv, "image_converter");
+    ros::NodeHandle nh;
+    image_pub = nh.advertise<sensor_msgs::Image>("/image_ir",1);
+    // ros::Subscriber image_sub=nh.subscribe("chatter",1000,chatterCallback);
+    // image_transport::ImageTransport it_(nh);
+    // image_transport::Subscriber image_sub_;
+    // image_transport::Publisher image_pub_;
+    // image_pub_=it_.advertise("/image_converter/output_video", 1);
+    ros::Rate loop_rate(10);
+
+
     //set priority to highest level
 #if defined(_WIN32)
     SetPriorityClass(GetCurrentProcess(), HIGH_PRIORITY_CLASS);
@@ -210,8 +227,22 @@ int main(void)
     pthread_create(&tid1, NULL, thread_function, (void*)&stream_frame_info1);
 
     pthread_create(&tid_cmd1, NULL, cmd_function, (void*)&stream_frame_info1);
+
+    // while(ros::ok())
+    // {
+    //     cout << "fdasf"<<endl;  
+    //     // ROS_INFO("fdsaf");       
+  
+    //     loop_rate.sleep();
+    // }
+
+
     pthread_join(tid1, NULL);
+    cout << "pthread_join"<<endl;  
     pthread_cancel(tid_cmd1);
+    cout << "pthread_cancel"<<endl;  
+
+
     iruvc_camera_close(iruvc_handle1);
 
     puts("EXIT");

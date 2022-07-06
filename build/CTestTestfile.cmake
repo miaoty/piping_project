@@ -7,3 +7,4 @@
 subdirs("gtest")
 subdirs("nlink_parser")
 subdirs("rplidar_ros")
+subdirs("USB_sample_cmd")

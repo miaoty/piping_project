@@ -1298,6 +1298,19 @@ rplidarNode/fast:
 	$(MAKE) -f rplidar_ros/CMakeFiles/rplidarNode.dir/build.make rplidar_ros/CMakeFiles/rplidarNode.dir/build
 .PHONY : rplidarNode/fast
 
+#=============================================================================
+# Target rules for targets named sample
+
+# Build rule for target.
+sample: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sample
+.PHONY : sample
+
+# fast build rule for target.
+sample/fast:
+	$(MAKE) -f USB_sample_cmd/CMakeFiles/sample.dir/build.make USB_sample_cmd/CMakeFiles/sample.dir/build
+.PHONY : sample/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1398,6 +1411,7 @@ help:
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... rplidarNode"
+	@echo "... sample"
 .PHONY : help
 
 

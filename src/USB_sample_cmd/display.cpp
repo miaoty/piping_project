@@ -3,6 +3,9 @@
 //PseudocolorYuv_t psdcolor_yuv_mapping_table[] = yuv_8bit_pseudocolor_table;
 //PseudocolorRgb_t psdcolor_rgb_mapping_table[] = rgb_8bit_pseudocolor_table;
 
+extern ros::Publisher image_pub;
+ 
+
 #if defined(_WIN32)
 int gettimeofday(struct timeval* tp, struct timezone* tzp)
 {
@@ -351,10 +354,13 @@ void display_one_frame(StreamFrameInfo_t* stream_frame_info, const char* title)
 
 #ifdef OPENCV_ENABLE
 	cv::Mat image = cv::Mat(height, width, CV_8UC3, stream_frame_info->image_tmp_frame2);
-	putText(image, frameText, cv::Point(11, 11), cv::FONT_HERSHEY_PLAIN, 1, cv::Scalar::all(0), 1, 8);
-	putText(image, frameText, cv::Point(10, 10), cv::FONT_HERSHEY_PLAIN, 1, cv::Scalar::all(255), 1, 8);
-	cv::imshow(title, image);
+	//putText(image, frameText, cv::Point(11, 11), cv::FONT_HERSHEY_PLAIN, 1, cv::Scalar::all(0), 1, 8);
+	// putText(image, frameText, cv::Point(10, 10), cv::FONT_HERSHEY_PLAIN, 1, cv::Scalar::all(255), 1, 8);
+	// cv::imshow(title, image);
+
+	image_pub.publish(cv_bridge::CvImage(std_msgs::Header(),"bgr8",image).toImageMsg());
 	cvWaitKey(5);
+
 #endif
 }
 

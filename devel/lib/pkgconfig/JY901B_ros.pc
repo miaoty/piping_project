@@ -1,0 +1,8 @@
+prefix=/home/tymiao/mty/piping_project/devel
+
+Name: JY901B_ros
+Description: Description of JY901B_ros
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

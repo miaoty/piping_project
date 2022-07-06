@@ -1,5 +1,5 @@
 #include "cmd.h"
-
+uint16_t prevalue=3;
 //command selection
 void command_sel(StreamFrameInfo_t* handle, int cmd_type)
 {
@@ -51,6 +51,10 @@ void command_sel(StreamFrameInfo_t* handle, int cmd_type)
 		basic_preview_yuv_format_set(handle->ircmd_handle, YUYV);
 		printf("preview yuv format set:YUYV\n");
 		break;
+	case 51:
+		basic_preview_mode_select(handle->ircmd_handle, USB_MODE,SINGLE_IMAGE_OR_TEMP);
+		printf("preview mode set:USB_mode\n");
+		break;
 	case 6:
 		rst = basic_zoom_center_up(handle->ircmd_handle);
 		printf("zoom_center_up\n");
@@ -81,11 +85,6 @@ void command_sel(StreamFrameInfo_t* handle, int cmd_type)
 		printf("basic_auto_shutter_vtemp_threshold\n");
 		break;
 	case 12:
-		value = 6;
-		basic_pseudo_color(handle->ircmd_handle, SET_PARAMS_STA, &value);
-		printf("pseudo color set:6\n");
-		break;
-	case 121:
 		value = 3;
 		basic_pseudo_color(handle->ircmd_handle, SET_PARAMS_STA, &value);
 		printf("pseudo color set:3\n");
@@ -154,6 +153,7 @@ void command_sel(StreamFrameInfo_t* handle, int cmd_type)
 //command thread function
 void* cmd_function(void* threadarg)
 {
+	command_sel(((StreamFrameInfo_t*)threadarg), 12);
 	int cmd = 0;
 	while (cmd != 999)
 	{
