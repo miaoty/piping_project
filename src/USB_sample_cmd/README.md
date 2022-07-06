@@ -2,6 +2,7 @@
 
 注意libs文件中库文件arm  amd64不同的linux版本
 先运行一个roscore   本为arm64
+可能需要自己安装一些库文件，sudo apt-get install lib**-dev
 ## 一、程序结构
 
 ![](./irsample_structure.png)
